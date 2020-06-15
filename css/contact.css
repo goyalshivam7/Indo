@@ -1,0 +1,25 @@
+
+#map {
+    height: 400px;
+    /* The height is 400 pixels */
+    width: 100%;
+    /* The width is the width of the web page */
+}
+
+ .mapouter {
+    position: relative;
+    text-align: right;
+    height: 667px;
+    width: 408px;
+}
+
+.gmap_canvas {
+    overflow: hidden;
+    background: none !important;
+    height: 667px;
+    width: 408px;
+}
+.homeButton{
+    margin-left: 80%;
+}
+                

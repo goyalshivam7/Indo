@@ -10,6 +10,8 @@
     <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css">
     <link rel="stylesheet" type="text/css" href="css/home.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
 </head>
 
@@ -73,10 +75,12 @@
             <div class="mb-3">
                 <div class="row">
                     <div class="col-md-4">
-                        <img src="images/aboutus.jpg" class=" img img-fluid">
+                        <img src="images/aboutus.jpg" class=" img img-fluid item" data-aos="fade-right"
+                        data-aos-offset="300"
+                        data-aos-easing="ease-in-sine">
                     </div>
                     <div class="col-md-8">
-                        <div class="text-body mx-5">
+                        <div class="text-body mx-5" data-aos="fade-left">
                             <h2 class="card-title ml-5 mt-5">About Us</h2>
                             <p class="card-text ml-5">GlobEXIM was founded by a team of founders having their respective
                                 unique<br>expertise in the fields of International Trade, Engineering &
@@ -98,7 +102,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="introduction bg-light">
+                <div class="introduction bg-light" data-aos="zoom-in">
                     <div class="row mx-5">
                         <div class="col-3">
                             <img src="...">
@@ -121,7 +125,7 @@
             </div>
             <div class="row">
                 <div class="col-md-4">
-                    <div class="box">
+                    <div class="box" data-aos="fade-right">
                         <div class="imgBx">
                             <img src="images/dark-chocolate-1.jpg" />
                         </div>
@@ -136,7 +140,7 @@
                     </div>
                 </div>
                 <div class="col-md-4">
-                    <div class="box">
+                    <div class="box" data-aos="fade-down">
                         <div class="imgBx">
                             <img src="images/dark-chocolate-1.jpg" />
                         </div>
@@ -151,7 +155,7 @@
                     </div>
                 </div>
                 <div class="col-md-4">
-                    <div class="box">
+                    <div class="box" data-aos="fade-left">
                         <div class="imgBx">
                             <img src="images/dark-chocolate-1.jpg" />
                         </div>
@@ -184,11 +188,11 @@
     <section class="mb-5">
         <center>
             <h1 class="ml6">
-              <span class="text-wrapper">
+              <span class="text-wrapper" data-aos="zoom-in">
                 <span class="letters">MEMBERSHIP&nbsp; AND &nbsp;ACCREDITATION</span>
               </span><br>
               <span>
-                  <span><img src="http://www.globeximtrading.com/wp-content/uploads/2019/07/ISO_9001-2015.jpg" alt="" width="200" height="200"></span>
+                  <span><img src="http://www.globeximtrading.com/wp-content/uploads/2019/07/ISO_9001-2015.jpg" alt="" width="200" height="200" data-aos="flip-up"></span>
               </span>
             </h1>
         </center>
@@ -215,6 +219,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
     <script src="js/main.js"></script>
     <script src="js/home.js"></script>
+    <script src="js/animation.js"></script>
 
 
 </body>

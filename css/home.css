@@ -38,17 +38,6 @@ padding-right: 5%;
 margin-top:3%;
 }
 
-
-@media only screen and (max-width: 600px) {
-    .img{
-        height: 400px;
-        width: 100%;
-    }
-    .introduction{
-        font-size: 12px;
-    }
-}
-
 /* section 3                   */
 
 .ml6 {
@@ -158,3 +147,14 @@ margin-top:3%;
     transform: translateY(0);
     transition-delay: 0.9s;
   }
+  
+
+@media (max-width: 600px) {
+  .img{
+      height: 400px;
+      width: 100%;
+  }
+  .introduction{
+      font-size: 12px;
+  }
+}

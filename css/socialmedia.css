@@ -1,40 +1,52 @@
-.sm-container i{
-  color: #ffffff;
-  padding: 40px;
-  position: relative;
-}
-.sm-menu {
-  width: 10px;
-  height: 10px;
-  position: absolute;
-  max-width: 1000px;
-  left:0%;
-  top: 30%;
-  transition: left 0.9s;
-  font-size: 30px;
-}
-.fb i {
-  color: black;
-}
-.tw i {
-  color: black;
-}
-.ins i {
-  color: black;
+.sm-container i {
+    color: #ffffff;
+    padding: 40px;
+    position: relative;
 }
 
-.sm-menu:hover,.fb:hover{
-  color: #3b5998; color: rgb(59, 89, 152);
-  left: 1%;
-  font-weight: bolder;
+.sm-menu {
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    max-width: 1000px;
+    left: 0%;
+    top: 30%;
+    transition: left 0.9s;
+    font-size: 30px;
 }
-.sm-menu:hover,.ins:hover{
-color: #bc2a8d; color: rgb(188, 42, 141);
-left: 1%;
-font-weight: bolder;
+
+.fb i {
+    color: black;
 }
-.sm-menu:hover,.tw:hover{
-  color: #00aced; color: rgb(0, 172, 237);
-  left: 1%;
-  font-weight: bolder;
+
+.tw i {
+    color: black;
+}
+
+.ins i {
+    color: black;
+}
+
+.sm-menu:hover,
+.fb:hover {
+    color: #3b5998;
+    color: rgb(59, 89, 152);
+    left: 1%;
+    font-weight: bolder;
+}
+
+.sm-menu:hover,
+.ins:hover {
+    color: #bc2a8d;
+    color: rgb(188, 42, 141);
+    left: 1%;
+    font-weight: bolder;
+}
+
+.sm-menu:hover,
+.tw:hover {
+    color: #00aced;
+    color: rgb(0, 172, 237);
+    left: 1%;
+    font-weight: bolder;
 }

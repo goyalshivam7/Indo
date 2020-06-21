@@ -1,37 +1,84 @@
-.theme {
-    background-color: lightsteelblue;
+@media (min-width: 1481px) {
+    .theme {
+        background-color: lightsteelblue;
+    }
+    .imageStyle {
+        height: 600px;
+        width: 500px;
+        box-shadow: 2px 4px 10px 0 rgba(0, 0, 0, 0.5);
+        margin-left: 20%;
+    }
+    section {
+        margin-top: 7%;
+    }
+    .card {
+        box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.2);
+    }
+    .content-card {
+        position: relative;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        min-width: 0;
+        word-wrap: break-word;
+        margin-left: 10%;
+        margin-right: 10%;
+        margin-top: 15%;
+    }
+    .text-style {
+        word-wrap: break-word;
+        padding-right: 5%;
+        padding-bottom: 5%;
+        padding-top: 5%;
+        font-size: 20px;
+    }
 }
 
-.imageStyle {
-    height: 600px;
-    width: 500px;
-    box-shadow: 2px 4px 10px 0 rgba(0, 0, 0, 0.5);
-    margin-left: 20%;
+@media (min-width: 320px) and (max-width: 767px) {
+    .theme {
+        background-color: lightsteelblue;
+    }
+    .imageStyle {
+        height: 400px;
+        width: 300px;
+        box-shadow: 2px 4px 10px 0 rgba(0, 0, 0, 0.5);
+        margin-left: 20%;
+    }
+    .card-deck {
+        padding: 5%;
+        margin-right: 0;
+    }
+    section {
+        margin-top: 5%;
+        padding: 3%;
+    }
+    .container-fluid h1 {
+        text-align: center;
+        padding-left: 5%;
+        padding-right: 5%;
+    }
 }
 
-section {
-    margin-top: 7%;
-}
-
-.card {
-    box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.2);
-}
-
-.content-card {
-    position: relative;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    min-width: 0;
-    word-wrap: break-word;
-    margin-left: 10%;
-    margin-right: 10%;
-    margin-top: 15%;
-}
-
-.text-style {
-    word-wrap: break-word;
-    padding: 8%;
-    font-size: 20px;
+@media (min-width: 768px) and (max-width: 1480px) {
+    .theme {
+        background-color: lightsteelblue;
+    }
+    .imageStyle {
+        height: 400px;
+        width: 300px;
+        box-shadow: 2px 4px 10px 0 rgba(0, 0, 0, 0.5);
+        margin-left: 20%;
+    }
+    .card-deck {
+        padding: 5%;
+        margin-right: 0;
+    }
+    .container-fluid h1 {
+        text-align: center;
+    }
+    section {
+        margin-top: 5%;
+        padding: 3%;
+    }
 }

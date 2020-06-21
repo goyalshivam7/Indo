@@ -50,3 +50,8 @@
     left: 1%;
     font-weight: bolder;
 }
+@media screen and (max-width: 1000px) {
+    .sm-container{
+        visibility: hidden;
+    }
+}

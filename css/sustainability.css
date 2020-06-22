@@ -1,0 +1,21 @@
+.text-style {
+    word-wrap: break-word;
+    padding: 5%;
+}
+
+.text-style h2 {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    padding-left: 5%;
+    padding-bottom: 5%;
+}
+
+.text-style ul li {
+    color: black;
+    font-size: 20px;
+    margin-bottom: 5%;
+}
+
+.card {
+    margin-top: 10%;
+    color: black;
+}

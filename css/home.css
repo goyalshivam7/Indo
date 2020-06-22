@@ -30,16 +30,6 @@ video {
     color: linen;
 }
 
-footer {
-    text-align: center;
-    background-image: url("bul.jpg");
-    opacity: 0.5;
-    color: #fff;
-    padding: 20px 0;
-    width: 100%;
-    position: relative;
-}
-
 
 /* section 2                  */
 
@@ -209,12 +199,6 @@ footer {
 .Column {
   display: table-cell;
 } */
-
-* {
-    margin: 0;
-    padding: 0;
-    font-family: sans-serif;
-}
 
 .body-content {
     width: 100%;

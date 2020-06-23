@@ -1,15 +1,13 @@
 @media (min-width: 1481px) {
     .theme {
-        background-color: lightsteelblue;
+        background-color: black;
+        color: cornsilk;
     }
     .imageStyle {
         height: 600px;
         width: 500px;
         box-shadow: 2px 4px 10px 0 rgba(0, 0, 0, 0.5);
         margin-left: 20%;
-    }
-    section {
-        margin-top: 7%;
     }
     .card {
         box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.2);
@@ -49,10 +47,6 @@
         padding: 5%;
         margin-right: 0;
     }
-    section {
-        margin-top: 5%;
-        padding: 3%;
-    }
     .container-fluid h1 {
         text-align: center;
         padding-left: 5%;
@@ -77,8 +71,8 @@
     .container-fluid h1 {
         text-align: center;
     }
-    section {
+    /* section {
         margin-top: 5%;
         padding: 3%;
-    }
+    } */
 }

@@ -10,7 +10,6 @@
 
 .inner-footer {
     width: 95%;
-    margin: auto;
     padding: 30px 10px;
     display: flex;
     flex-wrap: wrap;
@@ -43,7 +42,7 @@ h3 {
 }
 
 h2 {
-    margin: 10px 0;
+    padding: 10px 0;
     color: rgb(248, 239, 239);
     font-size: 16px;
     font-weight: lighter;

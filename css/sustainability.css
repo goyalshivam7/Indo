@@ -1,21 +1,89 @@
 .text-style {
     word-wrap: break-word;
     padding: 5%;
+    padding-right: 3%;
 }
 
-.text-style h2 {
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    padding-left: 5%;
+.text-style p {
+    font-weight: bold;
+}
+
+.side {
+    color: black;
+    background-color: whitesmoke;
+}
+
+.card-deck {
+    padding-left: 10%;
+    padding-right: 10%;
     padding-bottom: 5%;
 }
 
-.text-style ul li {
-    color: black;
-    font-size: 20px;
-    margin-bottom: 5%;
+.card {
+    box-shadow: 0 4px 10px 0 rgba(255, 32, 32, 0.466);
 }
 
-.card {
-    margin-top: 10%;
-    color: black;
+.card:hover {
+    background-color: #558b2f;
+    color: white;
+}
+
+@media (min-width: 1481px) {
+    .imgStyle {
+        height: 700px;
+    }
+    .text-style h3 {
+        font-family: Georgia, Times, serif;
+        padding-left: 5%;
+        padding-bottom: 5%;
+    }
+    .text-style ul li {
+        color: black;
+        font-size: 20px;
+        margin-bottom: 5%;
+        padding-bottom: 2%;
+    }
+    .text-style p {
+        font-size: 18px;
+        margin-left: 5%;
+        padding-top: 2%;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1480px) {
+    .imgStyle {
+        height: 600px;
+    }
+    .text-style h3 {
+        font-family: Georgia, Times, serif;
+        padding-left: 5%;
+        padding-bottom: 5%;
+    }
+    .text-style ul li {
+        color: black;
+        font-size: 16px;
+        margin-bottom: 5%;
+        padding-bottom: 2%;
+    }
+}
+
+@media (min-width: 320px) and (max-width: 767px) {
+    .imgStyle {
+        height: 300px;
+    }
+    .text-style h3 {
+        font-family: Georgia, Times, serif;
+        padding-left: 5%;
+        padding-bottom: 5%;
+        font-size: 20px;
+    }
+    .text-style ul li {
+        color: black;
+        font-size: small;
+        margin-bottom: 5%;
+    }
+    .text-style p {
+        font-size: 14px;
+        margin-left: 5%;
+    }
 }

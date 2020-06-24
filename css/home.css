@@ -136,6 +136,7 @@ video {
 
 .container .box .content {
     position: absolute;
+    color: black;
     left: 0;
     bottom: 0;
     width: 100%;

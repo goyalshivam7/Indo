@@ -8,11 +8,6 @@
     font-weight: bold;
 }
 
-.side {
-    color: black;
-    background-color: whitesmoke;
-}
-
 .card-deck {
     padding-left: 10%;
     padding-right: 10%;
@@ -23,9 +18,9 @@
     box-shadow: 0 4px 10px 0 rgba(255, 32, 32, 0.466);
 }
 
-.card:hover {
-    background-color: #558b2f;
-    color: white;
+.side-menu {
+    color: black;
+    background-color: lightgrey;
 }
 
 @media (min-width: 1481px) {

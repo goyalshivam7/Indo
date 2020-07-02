@@ -91,10 +91,15 @@
         color: black;
         font-size: small;
         margin-bottom: 5%;
+        padding-bottom: 7%;
     }
     .text-style p {
         font-size: 14px;
         margin-left: 5%;
+    }
+    .side-menu {
+        background-color: black;
+        color: white;
     }
 }
 

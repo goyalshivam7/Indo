@@ -1,0 +1,45 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+.card {
+    box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.2);
+}
+
+.img-style {
+    height: 200px;
+    width: 100%;
+}
+
+.theme {
+    background-color: lightsteelblue;
+}
+
+.card-deck {
+    padding: 5%;
+    margin-right: 0;
+}
+
+@media (min-width: 320px) and (max-width: 767px) {
+    .letter {
+        font-size: 24px
+    }
+    .img-style {
+        height: 200px;
+        width: 80%;
+        margin-left: 10%;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1480px) {
+    .letter {
+        font-size: 30px
+    }
+    .img-style {
+        height: 200px;
+        width: 80%;
+        margin-left: 10%;
+    }
+}

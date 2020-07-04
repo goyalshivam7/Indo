@@ -1,3 +1,11 @@
+.card-bg {
+    background-color: lightgreen;
+}
+
+.card-bg:hover {
+    background-image: url("../images/bul.jpg");
+}
+
 @media (min-width: 1481px) {
     .theme {
         background-color: black;

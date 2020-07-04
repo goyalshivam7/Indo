@@ -62,7 +62,7 @@
 
 @media (min-width: 768px) and (max-width: 1480px) {
     .imgStyle {
-        height: 600px;
+        height: 400px;
     }
     .text-style h3 {
         font-family: Georgia, Times, serif;

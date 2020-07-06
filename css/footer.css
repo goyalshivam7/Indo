@@ -84,12 +84,12 @@ li i {
 
 .social-media {
     width: 100%;
-    color: #fff;
     text-align: center;
 }
 
 .social-media a {
     text-decoration: none;
+    color: #fff;
 }
 
 .social-media i {

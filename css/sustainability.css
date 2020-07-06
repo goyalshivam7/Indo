@@ -14,9 +14,10 @@
     padding-bottom: 5%;
 }
 
-.card {
-    box-shadow: 0 4px 10px 0 rgba(255, 32, 32, 0.466);
-}
+
+/* .card {
+    box-shadow: 0 4px 10px 0 rgba(3, 209, 20, 0.925);
+} */
 
 .card:hover {
     background-image: url("../images/bul.jpg");

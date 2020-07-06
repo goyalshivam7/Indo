@@ -24,8 +24,8 @@
 }
 
 .side-menu {
+    background-color: whitesmoke;
     color: black;
-    background-color: lightgrey;
 }
 
 .img-text {
@@ -90,16 +90,11 @@
     .text-style ul li {
         color: black;
         font-size: small;
-        margin-bottom: 5%;
-        padding-bottom: 7%;
+        margin-top: 10%;
     }
     .text-style p {
         font-size: 14px;
         margin-left: 5%;
-    }
-    .side-menu {
-        background-color: black;
-        color: white;
     }
 }
 

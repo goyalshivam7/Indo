@@ -1,229 +1,397 @@
 <!DOCTYPE html>
 <html>
-
-<head>
+  <head>
     <title>
-        Events
+      Events
     </title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css" />
-    <link rel="stylesheet" href="css/footer.css">
-    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css"
+    />
+    <link rel="stylesheet" href="css/footer.css" />
+    <link
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+      rel="stylesheet"
+    />
     <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
     <style>
-        /* body {
+      /* body {
         height: 1000px;
         background-color: rgb(20, 20, 20);
       } */
-        
-        * {
-            margin: 0;
-            padding: 0;
-            -webkit-box-sizing: border-box;
-            box-sizing: border-box;
-        }
-        
-        h1 {
-            font-size: 2.5rem;
-            font-family: "Montserrat";
-            font-weight: normal;
-            color: #444;
-            text-align: center;
-        }
-        
-        .wrapper {
-            width: 90%;
-            margin: 0 auto;
-            max-width: 80rem;
-        }
-        
-        .cols {
-            display: -webkit-box;
-            display: -ms-flexbox;
-            display: flex;
-            -ms-flex-wrap: wrap;
-            flex-wrap: wrap;
-            -webkit-box-pack: center;
-            -ms-flex-pack: center;
-            justify-content: center;
-        }
-        
+
+      * {
+        margin: 0;
+        padding: 0;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+      }
+
+      h1 {
+        font-size: 2.5rem;
+        font-family: "Montserrat";
+        font-weight: normal;
+        color: #444;
+        text-align: center;
+      }
+
+      .wrapper {
+        width: 90%;
+        margin: 0 auto;
+        max-width: 80rem;
+      }
+
+      .cols {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+      }
+
+      .col {
+        width: calc(25% - 2rem);
+        margin: 1rem;
+        cursor: pointer;
+      }
+
+      .container {
+        -webkit-transform-style: preserve-3d;
+        transform-style: preserve-3d;
+        -webkit-perspective: 1000px;
+        perspective: 1000px;
+      }
+
+      .front,
+      .back {
+        background-size: cover;
+        background-position: center;
+        -webkit-transition: -webkit-transform 0.7s
+          cubic-bezier(0.4, 0.2, 0.2, 1);
+        transition: -webkit-transform 0.7s cubic-bezier(0.4, 0.2, 0.2, 1);
+        -o-transition: transform 0.7s cubic-bezier(0.4, 0.2, 0.2, 1);
+        transition: transform 0.7s cubic-bezier(0.4, 0.2, 0.2, 1);
+        transition: transform 0.7s cubic-bezier(0.4, 0.2, 0.2, 1),
+          -webkit-transform 0.7s cubic-bezier(0.4, 0.2, 0.2, 1);
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+        text-align: center;
+        min-height: 280px;
+        height: auto;
+        border-radius: 10px;
+        color: #fff;
+        font-size: 1.5rem;
+      }
+
+      .back {
+        background: #b8e907;
+        background: -webkit-linear-gradient(45deg, #cedce7 0%, #596a72 100%);
+        background: -o-linear-gradient(45deg, #cedce7 0%, #596a72 100%);
+        background: linear-gradient(45deg, #dd1da3 0%, #29bd3d 100%);
+      }
+
+      .front:after {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 1;
+        width: 100%;
+        height: 100%;
+        content: "";
+        display: block;
+        opacity: 0.6;
+        background-color: #000;
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+        border-radius: 10px;
+      }
+
+      .container:hover .front,
+      .container:hover .back {
+        -webkit-transition: -webkit-transform 0.7s
+          cubic-bezier(0.4, 0.2, 0.2, 1);
+        transition: -webkit-transform 0.7s cubic-bezier(0.4, 0.2, 0.2, 1);
+        -o-transition: transform 0.7s cubic-bezier(0.4, 0.2, 0.2, 1);
+        transition: transform 0.7s cubic-bezier(0.4, 0.2, 0.2, 1);
+        transition: transform 0.7s cubic-bezier(0.4, 0.2, 0.2, 1),
+          -webkit-transform 0.7s cubic-bezier(0.4, 0.2, 0.2, 1);
+      }
+
+      .back {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+      }
+
+      .inner {
+        -webkit-transform: translateY(-50%) translateZ(60px) scale(0.94);
+        transform: translateY(-50%) translateZ(60px) scale(0.94);
+        top: 50%;
+        position: absolute;
+        left: 0;
+        width: 100%;
+        padding: 2rem;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        outline: 1px solid transparent;
+        -webkit-perspective: inherit;
+        perspective: inherit;
+        z-index: 2;
+      }
+
+      .container .back {
+        -webkit-transform: rotateY(180deg);
+        transform: rotateY(180deg);
+        -webkit-transform-style: preserve-3d;
+        transform-style: preserve-3d;
+      }
+
+      .container .front {
+        -webkit-transform: rotateY(0deg);
+        transform: rotateY(0deg);
+        -webkit-transform-style: preserve-3d;
+        transform-style: preserve-3d;
+      }
+
+      .container:hover .back {
+        -webkit-transform: rotateY(0deg);
+        transform: rotateY(0deg);
+        -webkit-transform-style: preserve-3d;
+        transform-style: preserve-3d;
+      }
+
+      .container:hover .front {
+        -webkit-transform: rotateY(-180deg);
+        transform: rotateY(-180deg);
+        -webkit-transform-style: preserve-3d;
+        transform-style: preserve-3d;
+      }
+
+      .front .inner p {
+        font-size: 2rem;
+        margin-bottom: 2rem;
+        position: relative;
+      }
+
+      .front .inner p:after {
+        content: "";
+        width: 4rem;
+        height: 2px;
+        position: absolute;
+        background: #1dfa30;
+        display: block;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        bottom: -0.75rem;
+      }
+
+      .front .inner span {
+        color: rgb(44, 204, 92);
+        font-family: "Montserrat";
+        font-weight: 300;
+      }
+
+      @media screen and (max-width: 64rem) {
         .col {
-            width: calc(25% - 2rem);
-            margin: 1rem;
-            cursor: pointer;
+          width: calc(33.333333% - 2rem);
         }
-        
-        .container {
-            -webkit-transform-style: preserve-3d;
-            transform-style: preserve-3d;
-            -webkit-perspective: 1000px;
-            perspective: 1000px;
+      }
+
+      @media screen and (max-width: 48rem) {
+        .col {
+          width: calc(50% - 2rem);
         }
-        
-        .front,
-        .back {
-            background-size: cover;
-            background-position: center;
-            -webkit-transition: -webkit-transform 0.7s cubic-bezier(0.4, 0.2, 0.2, 1);
-            transition: -webkit-transform 0.7s cubic-bezier(0.4, 0.2, 0.2, 1);
-            -o-transition: transform 0.7s cubic-bezier(0.4, 0.2, 0.2, 1);
-            transition: transform 0.7s cubic-bezier(0.4, 0.2, 0.2, 1);
-            transition: transform 0.7s cubic-bezier(0.4, 0.2, 0.2, 1), -webkit-transform 0.7s cubic-bezier(0.4, 0.2, 0.2, 1);
-            -webkit-backface-visibility: hidden;
-            backface-visibility: hidden;
-            text-align: center;
-            min-height: 280px;
-            height: auto;
-            border-radius: 10px;
-            color: #fff;
-            font-size: 1.5rem;
+      }
+
+      @media screen and (max-width: 32rem) {
+        .col {
+          width: 100%;
+          margin: 0 0 2rem 0;
         }
-        
-        .back {
-            background: #b8e907;
-            background: -webkit-linear-gradient(45deg, #cedce7 0%, #596a72 100%);
-            background: -o-linear-gradient(45deg, #cedce7 0%, #596a72 100%);
-            background: linear-gradient(45deg, #dd1da3 0%, #29bd3d 100%);
+      }
+
+      .button {
+        background-color: #4caf50;
+        border: none;
+        color: white;
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        cursor: pointer;
+      }
+      @import url("https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap");
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        list-style: none;
+        text-decoration: none;
+      }
+      nav {
+        background: #0082e6;
+        height: 80px;
+        width: 100%;
+      }
+      label.logo {
+        color: #f2f2f2;
+        font-size: 33px;
+        line-height: 80px;
+        padding: 0 140px;
+        font-weight: 600;
+        font-family: "Poppins", sans-serif;
+      }
+      nav ul {
+        float: right;
+        margin-right: 60px;
+      }
+      nav ul li {
+        display: inline-block;
+        line-height: 80px;
+        margin: 0 2px;
+      }
+      nav ul li a {
+        color: #f2f2f2;
+        font-weight: 500;
+        font-size: 20px;
+        padding: 7px 13px;
+        border-radius: 3px;
+        /* text-transform: uppercase; */
+        font-family: "Poppins", sans-serif;
+      }
+      a.active,
+      a:hover {
+        background: #1b9bff;
+        transition: 0.5s;
+      }
+      .checkbtn {
+        font-size: 30px;
+        color: white;
+        float: right;
+        line-height: 80px;
+        margin-right: 40px;
+        cursor: pointer;
+        display: none;
+      }
+      #check {
+        display: none;
+      }
+      @media (max-width: 952px) {
+        label.logo {
+          font-size: 27px;
+          padding-left: 25px;
         }
-        
-        .front:after {
-            position: absolute;
-            top: 0;
-            left: 0;
-            z-index: 1;
-            width: 100%;
-            height: 100%;
-            content: "";
-            display: block;
-            opacity: 0.6;
-            background-color: #000;
-            -webkit-backface-visibility: hidden;
-            backface-visibility: hidden;
-            border-radius: 10px;
+        nav ul li a {
+          font-size: 16px;
         }
-        
-        .container:hover .front,
-        .container:hover .back {
-            -webkit-transition: -webkit-transform 0.7s cubic-bezier(0.4, 0.2, 0.2, 1);
-            transition: -webkit-transform 0.7s cubic-bezier(0.4, 0.2, 0.2, 1);
-            -o-transition: transform 0.7s cubic-bezier(0.4, 0.2, 0.2, 1);
-            transition: transform 0.7s cubic-bezier(0.4, 0.2, 0.2, 1);
-            transition: transform 0.7s cubic-bezier(0.4, 0.2, 0.2, 1), -webkit-transform 0.7s cubic-bezier(0.4, 0.2, 0.2, 1);
+      }
+      @media (max-width: 858px) {
+        .checkbtn {
+          display: block;
+          margin-right: 40px;
         }
-        
-        .back {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
+        ul {
+          position: fixed;
+          width: 100%;
+          height: 100vh;
+          background: #2c3e50;
+          top: 80px;
+          left: -100%;
+          text-align: center;
+          transition: all 0.5s;
         }
-        
-        .inner {
-            -webkit-transform: translateY(-50%) translateZ(60px) scale(0.94);
-            transform: translateY(-50%) translateZ(60px) scale(0.94);
-            top: 50%;
-            position: absolute;
-            left: 0;
-            width: 100%;
-            padding: 2rem;
-            -webkit-box-sizing: border-box;
-            box-sizing: border-box;
-            outline: 1px solid transparent;
-            -webkit-perspective: inherit;
-            perspective: inherit;
-            z-index: 2;
+        nav ul li {
+          display: block;
+          margin: 50px 0;
+          line-height: 30px;
         }
-        
-        .container .back {
-            -webkit-transform: rotateY(180deg);
-            transform: rotateY(180deg);
-            -webkit-transform-style: preserve-3d;
-            transform-style: preserve-3d;
+        nav ul li a {
+          font-size: 20px;
         }
-        
-        .container .front {
-            -webkit-transform: rotateY(0deg);
-            transform: rotateY(0deg);
-            -webkit-transform-style: preserve-3d;
-            transform-style: preserve-3d;
+        a:hover,
+        a.active {
+          background: none;
+          color: #0082e6;
         }
-        
-        .container:hover .back {
-            -webkit-transform: rotateY(0deg);
-            transform: rotateY(0deg);
-            -webkit-transform-style: preserve-3d;
-            transform-style: preserve-3d;
+        #check:checked ~ ul {
+          left: 0;
         }
-        
-        .container:hover .front {
-            -webkit-transform: rotateY(-180deg);
-            transform: rotateY(-180deg);
-            -webkit-transform-style: preserve-3d;
-            transform-style: preserve-3d;
+      }
+      section {
+        background: url(bg1.jpg) no-repeat;
+        background-size: cover;
+      }
+      /* body {
+        margin: 0;
+        font-family: Arial, Helvetica, sans-serif;
+      } */
+
+      .topnav {
+        overflow: hidden;
+        background-color: #333;
+      }
+
+      .topnav a {
+        float: left;
+        display: block;
+        color: #f2f2f2;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-size: 17px;
+      }
+
+      .topnav a:hover {
+        background-color: #ddd;
+        color: black;
+      }
+
+      .topnav a.active {
+        background-color: #4caf50;
+        color: white;
+      }
+
+      .topnav .icon {
+        display: none;
+      }
+
+      @media screen and (max-width: 600px) {
+        .topnav a:not(:first-child) {
+          display: none;
         }
-        
-        .front .inner p {
-            font-size: 2rem;
-            margin-bottom: 2rem;
-            position: relative;
+        .topnav a.icon {
+          float: right;
+          display: block;
         }
-        
-        .front .inner p:after {
-            content: "";
-            width: 4rem;
-            height: 2px;
-            position: absolute;
-            background: #1dfa30;
-            display: block;
-            left: 0;
-            right: 0;
-            margin: 0 auto;
-            bottom: -0.75rem;
+      }
+
+      @media screen and (max-width: 600px) {
+        .topnav.responsive {
+          position: relative;
         }
-        
-        .front .inner span {
-            color: rgb(44, 204, 92);
-            font-family: "Montserrat";
-            font-weight: 300;
+        .topnav.responsive .icon {
+          position: absolute;
+          right: 0;
+          top: 0;
         }
-        
-        @media screen and (max-width: 64rem) {
-            .col {
-                width: calc(33.333333% - 2rem);
-            }
+        .topnav.responsive a {
+          float: none;
+          display: block;
+          text-align: left;
         }
-        
-        @media screen and (max-width: 48rem) {
-            .col {
-                width: calc(50% - 2rem);
-            }
-        }
-        
-        @media screen and (max-width: 32rem) {
-            .col {
-                width: 100%;
-                margin: 0 0 2rem 0;
-            }
-        }
-        
-        .button {
-            background-color: #4caf50;
-            border: none;
-            color: white;
-            padding: 15px 32px;
-            text-align: center;
-            text-decoration: none;
-            display: inline-block;
-            font-size: 16px;
-            margin: 4px 2px;
-            cursor: pointer;
-        }
+      }
     </style>
-</head>
+  </head>
 
-<body>
-
-    <section>
+  <body>
+    <!-- <section>
         <nav class="navbar navbar-expand-lg fixed-top navbar-dark text-white" style="background-color: black;">
             <a class="navbar-brand text-white px-2" style="font-weight: bold;" href="index.html">
                 <img src="images/logo.png" width="150" height="40" alt="" loading="lazy">
@@ -259,265 +427,302 @@
 
             </div>
         </nav>
-    </section>
+    </section> -->
+    <div class="topnav" id="myTopnav">
+      <a href="#home" class="active">Home</a>
+      <a href="#news">News</a>
+      <a href="#contact">Contact</a>
+      <a href="#about">About</a>
+      <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+        <i class="fa fa-bars"></i>
+      </a>
+    </div>
     <section>
-        <div class="wrapper">
-            <div class="cols">
-                <div class="col" ontouchstart="this.classList.toggle('hover');">
-                    <div class="container">
-                        <div class="front" style="background-image: url(img/4.jpg);">
-                            <div class="inner">
-                                <p>Seedlac</p>
-                                <!-- <span>shdjklf</span> -->
-                            </div>
-                        </div>
-                        <div class="back">
-                            <div class="inner">
-                                <p>
-                                    This event is all about designing a unique robot which works mechanically or electrically.
-                                </p>
+      <div class="wrapper">
+        <div class="cols">
+          <div class="col" ontouchstart="this.classList.toggle('hover');">
+            <div class="container">
+              <div class="front" style="background-image: url(img/4.jpg);">
+                <div class="inner">
+                  <p>Seedlac</p>
+                  <!-- <span>shdjklf</span> -->
+                </div>
+              </div>
+              <div class="back">
+                <div class="inner">
+                  <p>
+                    This event is all about designing a unique robot which works
+                    mechanically or electrically.
+                  </p>
 
-                                <a href="pro\ROBOKART.html"><button type="button" class="button">Read More!</button></a
-                >
+                  <a href="pro\ROBOKART.html"
+                    ><button type="button" class="button">Read More!</button></a
+                  >
+                </div>
               </div>
             </div>
           </div>
-        </div>
-        <div class="col" ontouchstart="this.classList.toggle('hover');">
-          <div class="container">
-            <div class="front" style="background-image: url(img/4.jpg);">
-              <div class="inner">
-                <p>Button Shellac</p>
-                <!-- <span>alsljfdkl</span> -->
+          <div class="col" ontouchstart="this.classList.toggle('hover');">
+            <div class="container">
+              <div class="front" style="background-image: url(img/4.jpg);">
+                <div class="inner">
+                  <p>Button Shellac</p>
+                  <!-- <span>alsljfdkl</span> -->
+                </div>
               </div>
-            </div>
-            <div class="back">
-              <div class="inner">
-                <p>
-                  Welcome to blind coding, yes, you heard that right! In this
-                  event, you'll be placed outside your comfort zone
-                </p>
-                <a href="pro\ROBOKART.html"
-                  ><button type="button" class="button">Read More!</button></a
-                >
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col" ontouchstart="this.classList.toggle('hover');">
-          <div class="container">
-            <div class="front" style="background-image: url(img/4.jpg);" ;>
-              <div class="inner">
-                <p>Shellac</p>
-                <!-- <span>Mathematics Club</span> -->
-              </div>
-            </div>
-            <div class="back">
-              <div class="inner">
-                <p>
-                  Math Mania is a funtastic event for all Math Maniacs. The
-                  event involves exciting math based quizzes and puzzles.
-                </p>
-                <a href="pro\ROBOKART.html"
-                  ><button type="button" class="button">Read More!</button></a
-                >
+              <div class="back">
+                <div class="inner">
+                  <p>
+                    Welcome to blind coding, yes, you heard that right! In this
+                    event, you'll be placed outside your comfort zone
+                  </p>
+                  <a href="pro\ROBOKART.html"
+                    ><button type="button" class="button">Read More!</button></a
+                  >
+                </div>
               </div>
             </div>
           </div>
-        </div>
-        <div class="col" ontouchstart="this.classList.toggle('hover');">
-          <div class="container">
-            <div class="front" style="background-image: url(img/4.jpg);" ;>
-              <div class="inner">
-                <p>Bleach Lac</p>
-                <!-- <span>shfdjjhdhd</span> -->
+          <div class="col" ontouchstart="this.classList.toggle('hover');">
+            <div class="container">
+              <div class="front" style="background-image: url(img/4.jpg);" ;>
+                <div class="inner">
+                  <p>Shellac</p>
+                  <!-- <span>Mathematics Club</span> -->
+                </div>
               </div>
-            </div>
-            <div class="back">
-              <div class="inner">
-                <p>
-                  Get the most creative and lose yourself in the green world and
-                  bring your imagination to life in the form of posters.
-                </p>
-                <a href="pro\ROBOKART.html"
-                  ><button type="button" class="button">Read More!</button></a
-                >
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col" ontouchstart="this.classList.toggle('hover');">
-          <div class="container">
-            <div class="front" style="background-image: url(img/4.jpg);">
-              <div class="inner">
-                <p>Aleuritic Acid</p>
-                <!-- <span>Hardware Club</span> -->
-              </div>
-            </div>
-            <div class="back">
-              <div class="inner">
-                <p>
-                  This event is for electronics lovers. Are you a person who
-                  handles circuits and logic gates? Then you are in the right
-                  place.
-                </p>
-                <a href="pro\ROBOKART.html"
-                  ><button type="button" class="button">Read More!</button></a
-                >
+              <div class="back">
+                <div class="inner">
+                  <p>
+                    Math Mania is a funtastic event for all Math Maniacs. The
+                    event involves exciting math based quizzes and puzzles.
+                  </p>
+                  <a href="pro\ROBOKART.html"
+                    ><button type="button" class="button">Read More!</button></a
+                  >
+                </div>
               </div>
             </div>
           </div>
-        </div>
-        <div class="col" ontouchstart="this.classList.toggle('hover');">
-          <div class="container">
-            <div class="front" style="background-image: url(img/4.jpg);">
-              <div class="inner">
-                <p>Ambrettolide</p>
-                <!-- <span>Science Club</span> -->
+          <div class="col" ontouchstart="this.classList.toggle('hover');">
+            <div class="container">
+              <div class="front" style="background-image: url(img/4.jpg);" ;>
+                <div class="inner">
+                  <p>Bleach Lac</p>
+                  <!-- <span>shfdjjhdhd</span> -->
+                </div>
               </div>
-            </div>
-            <div class="back">
-              <div class="inner">
-                <p>
-                  Are you a science lover? Are you ready for a test of
-                  knowledge? If yes, then this is a platform to show-off .
-                </p>
-                <a href="pro\ROBOKART.html"
-                  ><button type="button" class="button">Read More!</button></a
-                >
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col" ontouchstart="this.classList.toggle('hover');">
-          <div class="container">
-            <div class="front" style="background-image: url(img/4.jpg);">
-              <div class="inner">
-                <p>Lac Dye</p>
-                <!-- <span> dhgfdsj </span> -->
-              </div>
-            </div>
-            <div class="back">
-              <div class="inner">
-                <p>
-                  CodeVita is an energising event which involves solving an
-                  exciting problem allotted to the participants.
-                </p>
-                <a href="pro\ROBOKART.html"
-                  ><button type="button" class="button">Read More!</button></a
-                >
+              <div class="back">
+                <div class="inner">
+                  <p>
+                    Get the most creative and lose yourself in the green world
+                    and bring your imagination to life in the form of posters.
+                  </p>
+                  <a href="pro\ROBOKART.html"
+                    ><button type="button" class="button">Read More!</button></a
+                  >
+                </div>
               </div>
             </div>
           </div>
-        </div>
-        <div class="col" ontouchstart="this.classList.toggle('hover');">
-          <div class="container">
-            <div class="front" style="background-image: url(img/4.jpg);">
-              <div class="inner">
-                <p>Wax</p>
-                <!-- <span>askdfhdskjfdshgf</span> -->
+          <div class="col" ontouchstart="this.classList.toggle('hover');">
+            <div class="container">
+              <div class="front" style="background-image: url(img/4.jpg);">
+                <div class="inner">
+                  <p>Aleuritic Acid</p>
+                  <!-- <span>Hardware Club</span> -->
+                </div>
+              </div>
+              <div class="back">
+                <div class="inner">
+                  <p>
+                    This event is for electronics lovers. Are you a person who
+                    handles circuits and logic gates? Then you are in the right
+                    place.
+                  </p>
+                  <a href="pro\ROBOKART.html"
+                    ><button type="button" class="button">Read More!</button></a
+                  >
+                </div>
               </div>
             </div>
-            <div class="back">
-              <div class="inner">
-                <p>
-                  Innovation is crucial to the continuing success of an
-                  organisation. This event is all about UNBOXING YOUR IDEAS.
-                </p>
-                <a href="pro\ROBOKART.html"
-                  ><button type="button" class="button">Read More!</button></a
-                >
+          </div>
+          <div class="col" ontouchstart="this.classList.toggle('hover');">
+            <div class="container">
+              <div class="front" style="background-image: url(img/4.jpg);">
+                <div class="inner">
+                  <p>Ambrettolide</p>
+                  <!-- <span>Science Club</span> -->
+                </div>
+              </div>
+              <div class="back">
+                <div class="inner">
+                  <p>
+                    Are you a science lover? Are you ready for a test of
+                    knowledge? If yes, then this is a platform to show-off .
+                  </p>
+                  <a href="pro\ROBOKART.html"
+                    ><button type="button" class="button">Read More!</button></a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col" ontouchstart="this.classList.toggle('hover');">
+            <div class="container">
+              <div class="front" style="background-image: url(img/4.jpg);">
+                <div class="inner">
+                  <p>Lac Dye</p>
+                  <!-- <span> dhgfdsj </span> -->
+                </div>
+              </div>
+              <div class="back">
+                <div class="inner">
+                  <p>
+                    CodeVita is an energising event which involves solving an
+                    exciting problem allotted to the participants.
+                  </p>
+                  <a href="pro\ROBOKART.html"
+                    ><button type="button" class="button">Read More!</button></a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col" ontouchstart="this.classList.toggle('hover');">
+            <div class="container">
+              <div class="front" style="background-image: url(img/4.jpg);">
+                <div class="inner">
+                  <p>Wax</p>
+                  <!-- <span>askdfhdskjfdshgf</span> -->
+                </div>
+              </div>
+              <div class="back">
+                <div class="inner">
+                  <p>
+                    Innovation is crucial to the continuing success of an
+                    organisation. This event is all about UNBOXING YOUR IDEAS.
+                  </p>
+                  <a href="pro\ROBOKART.html"
+                    ><button type="button" class="button">Read More!</button></a
+                  >
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
     </section>
     <section>
       <div class="footer">
-          <div class="inner-footer">
+        <div class="inner-footer">
+          <div class="footer-items" data-aos="fade-left">
+            <img
+              src="images/logo.png"
+              width="250"
+              height="70"
+              alt=""
+              loading="lazy"
+            />
+            <br /><br />
+            <p>
+              Indolacca Shellac Industries Private Limited is a Private
+              incorporated company classified as Non-govt company. It is inolved
+              in Manufacture of other chemical products.
+            </p>
+          </div>
+          <br />
+          <div class="footer-items" data-aos="fade-right">
+            <br />
+            <h4 style="color: rgb(178, 230, 36);">Quick Links</h4>
+            <div class="border"></div>
+            <ul>
+              <a href="">
+                <li>Home</li>
+              </a>
+              <a href="">
+                <li>About Us</li>
+              </a>
+              <a href="">
+                <li>Products</li>
+              </a>
+              <a href="">
+                <li>Blog</li>
+              </a>
+              <a href="">
+                <li>Contact Us</li>
+              </a>
+            </ul>
+          </div>
 
-              <div class="footer-items" data-aos="fade-left">
-                  <img src="images/logo.png" width="250" height="70" alt="" loading="lazy">
-                  <br><br>
-                  <p>
-                      Indolacca Shellac Industries Private Limited is a Private incorporated company classified as Non-govt company. It is inolved in Manufacture of other chemical products.
-                  </p>
-              </div>
-              <br>
-              <div class="footer-items" data-aos="fade-right">
-                  <br>
-                  <h4 style="color: rgb(178, 230, 36);">Quick Links</h4>
-                  <div class="border"></div>
-                  <ul>
-                      <a href="">
-                          <li>Home</li>
-                      </a>
-                                <a href="">
-                                    <li>About Us</li>
-                                </a>
-                                <a href="">
-                                    <li>Products</li>
-                                </a>
-                                <a href="">
-                                    <li>Blog</li>
-                                </a>
-                                <a href="">
-                                    <li>Contact Us</li>
-                                </a>
-                                </ul>
-                            </div>
+          <div class="footer-items" data-aos="fade-right">
+            <br />
+            <h4 style="color: rgb(178, 230, 36);">Products</h4>
+            <div class="border"></div>
+            <ul>
+              <a href="">
+                <li>SHEED LAC</li>
+              </a>
+              <a href="">
+                <li>BUTTON LAC</li>
+              </a>
+              <a href="">
+                <li>SHELLAC</li>
+              </a>
+              <a href="">
+                <li>BLEACH SHELLAC</li>
+              </a>
+              <a href="">
+                <li>ALEURITIC ACID</li>
+              </a>
+            </ul>
+          </div>
 
-                            <div class="footer-items" data-aos="fade-right">
-                                <br>
-                                <h4 style="color: rgb(178, 230, 36);">Products</h4>
-                                <div class="border"></div>
-                                <ul>
-                                    <a href="">
-                                        <li>SHEED LAC</li>
-                                    </a>
-                                    <a href="">
-                                        <li>BUTTON LAC</li>
-                                    </a>
-                                    <a href="">
-                                        <li>SHELLAC</li>
-                                    </a>
-                                    <a href="">
-                                        <li>BLEACH SHELLAC</li>
-                                    </a>
-                                    <a href="">
-                                        <li>ALEURITIC ACID</li>
-                                    </a>
-                                </ul>
-                            </div>
-
-                            <div class="footer-items" data-aos="fade-right">
-                                <br>
-                                <h4 style="color: rgb(178, 230, 36);">Contact Us</h4>
-                                <div class="border"></div>
-                                <ul>
-                                    <li><i class="fa fa-map-marker" aria-hidden="true"></i>1, XYZ Street, New Delhi</li>
-                                    <li><i class="fa fa-phone" aria-hidden="true"></i>+91-9176561782</li>
-                                    <li><i class="fa fa-envelope" aria-hidden="true"></i>info@indolacca.com</li>
-                                </ul>
-                                <div class="social-media">
-                                    <a href=""><i class="fa fa-facebook" aria-hidden="true"></i></a>
-                                    <a href=""><i class="fa fa-twitter" aria-hidden="true"></i></a>
-                                    <a href=""><i class="fa fa-instagram" aria-hidden="true"></i></a>
-                                    <a href=""><i class="fa fa-google-plus" aria-hidden="true"></i></a>
-                                </div>
-                            </div>
-
-                        </div>
-                        <div class="footer-bottom">
-                            Copyright &copy; 2020 - <a href="#"> Indo Lacca</a>. All rights reserved. | <a href="#">Email Login</a>(For Official use)
-                        </div>
-                    </div>
+          <div class="footer-items" data-aos="fade-right">
+            <br />
+            <h4 style="color: rgb(178, 230, 36);">Contact Us</h4>
+            <div class="border"></div>
+            <ul>
+              <li>
+                <i class="fa fa-map-marker" aria-hidden="true"></i>1, XYZ
+                Street, New Delhi
+              </li>
+              <li>
+                <i class="fa fa-phone" aria-hidden="true"></i>+91-9176561782
+              </li>
+              <li>
+                <i class="fa fa-envelope" aria-hidden="true"></i
+                >info@indolacca.com
+              </li>
+            </ul>
+            <div class="social-media">
+              <a href=""><i class="fa fa-facebook" aria-hidden="true"></i></a>
+              <a href=""><i class="fa fa-twitter" aria-hidden="true"></i></a>
+              <a href=""><i class="fa fa-instagram" aria-hidden="true"></i></a>
+              <a href=""
+                ><i class="fa fa-google-plus" aria-hidden="true"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          Copyright &copy; 2020 - <a href="#"> Indo Lacca</a>. All rights
+          reserved. | <a href="#">Email Login</a>(For Official use)
+        </div>
+      </div>
     </section>
-
-</body>
-<!-- <script>
+  </body>
+  <script>
+    function myFunction() {
+      var x = document.getElementById("myTopnav");
+      if (x.className === "topnav") {
+        x.className += " responsive";
+      } else {
+        x.className = "topnav";
+      }
+    }
+  </script>
+  <!-- <script>
     particlesJS("particles-js", {
       particles: {
         number: {
@@ -630,5 +835,4 @@
       retina_detect: true,
     });
   </script> -->
-
 </html>

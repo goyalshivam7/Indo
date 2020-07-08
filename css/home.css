@@ -222,7 +222,7 @@ video {
         height: 400px;
         width: 300px;
         box-shadow: 2px 4px 10px 0 rgba(0, 0, 0, 0.5);
-        margin-left: 10%;
+        margin-left: 5%;
     }
     .introduction {
         font-size: 12px;

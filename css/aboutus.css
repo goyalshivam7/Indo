@@ -3,7 +3,7 @@
 }
 
 .card-bg:hover {
-    background-image: url("../images/bul.jpg");
+    background-image: url("../images/green.jpg");
 }
 
 @media (min-width: 1481px) {

@@ -2,7 +2,7 @@
     position: relative;
     text-align: right;
     height: 667px;
-    width: 408px;
+    width: 80%;
 }
 
 .gmap_canvas {
@@ -13,8 +13,11 @@
 }
 
 .map-style {
-    width: 408px;
+    width: 100%;
     height: 430px;
+}
+.contact {
+    left: 0%;
 }
 
 @media (min-width: 320px) and (max-width: 767px) {
@@ -22,13 +25,16 @@
         position: relative;
         text-align: right;
         height: 420px;
-        width: 320px;
+        width: 100%;
     }
     .map-style {
-        width: 308px;
+        width: 100%;
         height: 350px;
-        padding-left: 10%;
+        /* padding-left: 10%; */
         margin-top: 10px;
+    }
+    .contact {
+    left: 3%;
     }
 }
 

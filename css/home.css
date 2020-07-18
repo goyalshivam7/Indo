@@ -4,13 +4,6 @@
     box-sizing: border-box;
 }
 
-body {
-    margin: 0;
-    font-family: sans-serif;
-    overflow-x: hidden;
-    background-color: rgb(248, 248, 247);
-}
-
 video {
     display: flex;
     width: 100%;
@@ -92,17 +85,11 @@ video {
     line-height: 1em;
 }
 
-.container {
-    position: relative;
-    /* width: 1200px; */
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-}
+
 
 .container .box {
     position: relative;
-    width: 280px;
+    width: 320px;
     height: 400px;
     margin: 20px 0;
     box-sizing: border-box;
@@ -150,6 +137,7 @@ video {
 .container .box .content h2 {
     margin: 0;
     padding: 0;
+    color: #000;
 }
 
 .container .box .content a {
@@ -212,7 +200,7 @@ video {
     line-height: 40px;
 }
 
-@media (min-width: 320px) and (max-width: 1000px) {
+@media (min-width: 320px) and (max-width: 767px) {
     .letters {
         font-size: 24px;
         padding-right: 2%;
@@ -226,5 +214,13 @@ video {
     }
     .introduction {
         font-size: 12px;
+    }
+    
+    .imgBx{
+      
+      margin-left: 12%;
+    }
+    .content{
+        margin-left: 10%;
     }
 }

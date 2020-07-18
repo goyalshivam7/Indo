@@ -7,10 +7,6 @@
 }
 
 @media (min-width: 1481px) {
-    .theme {
-        background-color: black;
-        color: cornsilk;
-    }
     .imageStyle {
         height: 600px;
         width: 500px;
@@ -42,10 +38,7 @@
 }
 
 @media (min-width: 320px) and (max-width: 767px) {
-    .theme {
-        background-color: black;
-        color: white;
-    }
+   
     .imageStyle {
         height: 400px;
         width: 300px;
@@ -68,10 +61,7 @@
 }
 
 @media (min-width: 768px) and (max-width: 1480px) {
-    .theme {
-        background-color: black;
-        color: white;
-    }
+    
     .imageStyle {
         height: 400px;
         width: 300px;

@@ -23,7 +23,7 @@
     color: black;
 }
 
-.ins i {
+.in i {
     color: black;
 }
 
@@ -33,14 +33,16 @@
     color: rgb(59, 89, 152);
     left: 1%;
     font-weight: bolder;
+    background-color: white;
 }
 
 .sm-menu:hover,
-.ins:hover {
+.in:hover {
     color: #bc2a8d;
     color: rgb(188, 42, 141);
     left: 1%;
     font-weight: bolder;
+    background-color: white;
 }
 
 .sm-menu:hover,
@@ -49,9 +51,11 @@
     color: rgb(0, 172, 237);
     left: 1%;
     font-weight: bolder;
+    background-color: white;
 }
+
 @media screen and (max-width: 1000px) {
-    .sm-container{
+    .sm-container {
         visibility: hidden;
     }
 }

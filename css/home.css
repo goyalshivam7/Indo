@@ -85,8 +85,6 @@ video {
     line-height: 1em;
 }
 
-
-
 .container .box {
     position: relative;
     width: 320px;
@@ -215,12 +213,10 @@ video {
     .introduction {
         font-size: 12px;
     }
-    
-    .imgBx{
-      
-      margin-left: 12%;
+    .imgBx {
+        margin-left: 12%;
     }
-    .content{
+    .content {
         margin-left: 10%;
     }
 }

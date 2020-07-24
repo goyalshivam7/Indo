@@ -23,6 +23,10 @@ video {
     color: linen;
 }
 
+.card {
+    border: white;
+}
+
 
 /* footer {
     text-align: center;

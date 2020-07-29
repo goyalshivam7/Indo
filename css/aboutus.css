@@ -1,9 +1,17 @@
-.card-bg {
-    background-color: #DCEDC8;
+.textHeading {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
-.card-bg:hover {
-    background-image: url("../images/green.jpg");
+.card:hover {
+    background-color: aliceblue;
+}
+
+.card-logo {
+    align-items: center;
+    margin-left: 43%;
 }
 
 @media (min-width: 1481px) {
@@ -13,9 +21,9 @@
         box-shadow: 2px 4px 10px 0 rgba(0, 0, 0, 0.5);
         margin-left: 20%;
     }
-    .card {
+    /* .card {
         box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.2);
-    }
+    } */
     .content-card {
         position: relative;
         display: -ms-flexbox;
@@ -38,7 +46,9 @@
 }
 
 @media (min-width: 320px) and (max-width: 767px) {
-   
+    .carousel-img {
+        height: 300px;
+    }
     .imageStyle {
         height: 400px;
         width: 300px;
@@ -61,7 +71,9 @@
 }
 
 @media (min-width: 768px) and (max-width: 1480px) {
-    
+    .carousel-img {
+        height: 300px;
+    }
     .imageStyle {
         height: 400px;
         width: 300px;

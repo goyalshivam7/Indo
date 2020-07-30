@@ -9,6 +9,10 @@
     background-color: aliceblue;
 }
 
+.card-text {
+    color: grey;
+}
+
 .card-logo {
     align-items: center;
     margin-left: 43%;

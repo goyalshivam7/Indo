@@ -4,10 +4,10 @@
     font-family: sans-serif;
 }
 
-.card {
+/*.card {
     box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.2);
 }
-
+*/
 .img-style {
     height: 200px;
     width: 100%;
@@ -18,7 +18,13 @@
     margin-right: 0;
 }
 
+.but {
+    margin-right: 45px;
+}
 @media (min-width: 320px) and (max-width: 767px) {
+    .carousel-img {
+        height: 300px;
+    }
     .letter {
         font-size: 20px
     }
@@ -30,6 +36,9 @@
 }
 
 @media (min-width: 768px) and (max-width: 1480px) {
+    .carousel-img {
+        height: 300px;
+    }
     .letter {
         font-size: 30px
     }

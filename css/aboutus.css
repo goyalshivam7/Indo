@@ -18,6 +18,11 @@
     margin-left: 43%;
 }
 
+.leadership {
+    word-wrap: break-word;
+    color: gray;
+}
+
 @media (min-width: 1481px) {
     .imageStyle {
         height: 600px;

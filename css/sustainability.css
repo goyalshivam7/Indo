@@ -2,22 +2,32 @@
     word-wrap: break-word;
     padding: 5%;
     padding-right: 3%;
-}
-
-.text-style p {
-    font-weight: bold;
-}
-
-.card-deck {
     padding-left: 10%;
     padding-right: 10%;
     padding-bottom: 5%;
 }
 
+.card-sustain-logo {
+    position: relative;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-clip: border-box;
+    align-items: center;
+}
 
-/* .card {
-    box-shadow: 0 4px 10px 0 rgba(3, 209, 20, 0.925);
-} */
+.logo-img {
+    height: 350;
+    width: 350;
+}
+
+.logo-text {
+    font-size: 40px;
+    font-weight: bold;
+}
 
 .card:hover {
     background-image: url("../images/bul.jpg");
@@ -70,10 +80,6 @@
         font-family: Georgia, Times, serif;
         padding-left: 5%;
         padding-bottom: 5%;
-    }
-    .text-style ul li {
-        color: black;
-        font-size: 16px;
         margin-bottom: 5%;
         padding-bottom: 2%;
     }
@@ -87,21 +93,20 @@
         font-family: Georgia, Times, serif;
         padding-left: 5%;
         padding-bottom: 5%;
-        font-size: 20px;
-    }
-    .text-style ul li {
-        color: black;
-        font-size: small;
-        margin-top: 10%;
     }
     .text-style p {
         font-size: 14px;
         margin-left: 5%;
     }
+    .logo-text {
+        font-size: 18px;
+        font-weight: bold;
+    }
+    .logo-img {
+        height: 250;
+        width: 250;
+    }
 }
-
-
-/*    card  slider  */
 
 @media (min-width: 768px) {
     /* show 3 items */

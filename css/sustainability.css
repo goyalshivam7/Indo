@@ -14,6 +14,18 @@
     padding-bottom: 5%;
 }
 
+.card-sustain-logo {
+    position: relative;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-clip: border-box;
+    align-items: center;
+}
+
 
 /* .card {
     box-shadow: 0 4px 10px 0 rgba(3, 209, 20, 0.925);

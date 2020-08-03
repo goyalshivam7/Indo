@@ -10,6 +10,13 @@
     border: white;
 }
 
+.textHeading {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
 .gmap_canvas {
     overflow: hidden;
     background: none !important;
@@ -62,6 +69,9 @@
         height: 350px;
         /* padding-left: 10%; */
         margin-top: 10px;
+    }
+    .carousel-img {
+        height: 300px;
     }
 }
 

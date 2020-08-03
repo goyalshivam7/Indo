@@ -62,141 +62,34 @@
     </section>
     <div class="container card">
         <div class="row">
-            <form>
-                <div class="form-row">
-                    <div class="form-group col-md-6">
-                        <label>Name*</label>
-                        <input type="text" class="form-control">
-                    </div>
-                    <div class="form-group col-md-6">
-                        <label for="inputEmail4">Email Address*</label>
-                        <input type="email" class="form-control">
-                    </div>
-                </div>
-                <div class="form-row">
-                    <div class="form-group col-md-6">
-                        <label for="inputEmail4">Mobile Number</label>
-                        <input type="number" class="form-control">
-                    </div>
-                    <div class="form-group col-md-6">
-                        <label>Subject</label>
-                        <select id="inputState" class="form-control">
-              <option selected>Choose...</option>
-              <option>...</option>
-            </select>
-                    </div>
-                </div>
-                <div class="form-group col-md-12">
-                    <div class="col-md-12">
-                        <div class="row">
-                            <div class="col-md-12">
-                                <label>Product(s) </label>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-12">
-                                <div class="checkbox-group">
-                                    <div class="row">
-                                        <div class="col-md-5">
-                                            <label class="checkbox-inline">
-                        <input type="checkbox" name="checkboxes[]" id="inlineCheckbox1" value="CEMGUARD® Fly Ash"> CEMGUARD® Fly Ash
-                      </label>
-                                        </div>
-                                        <div class="col-md-3">
-                                            <label class="checkbox-inline">
-                        <input type="checkbox" name="checkboxes[]" id="inlineCheckbox2" value="JSW GGBFS"> JSW GGBFS
-                      </label>
-                                        </div>
-                                        <div class="col-md-4">
-                                            <label class="checkbox-inline">
-                        <input type="checkbox" name="checkboxes[]" id="inlineCheckbox3" value="Natural Gypsum"> Natural Gypsum
-                      </label>
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-md-5">
-                                            <label class="checkbox-inline">
-                        <input type="checkbox" name="checkboxes[]" id="inlineCheckbox4" value="CEMGUARD® Microsilica"> CEMGUARD® Microsilica
-                      </label>
-                                        </div>
-                                        <div class="col-md-3">
-                                            <label class="checkbox-inline">
-                        <input type="checkbox" name="checkboxes[]" id="inlineCheckbox5" value="GBFS"> GBFS
-                      </label>
-                                        </div>
-                                        <div class="col-md-4">
-                                            <label class="checkbox-inline">
-                        <input type="checkbox" name="checkboxes[]" id="inlineCheckbox6" value="Copper Slag"> Copper Slag
-                      </label>
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-md-5">
-                                            <label class="checkbox-inline">
-                        <input type="checkbox" name="checkboxes[]" id="inlineCheckbox7" value="Cement"> Cement
-                      </label>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+          <div class="col-md-6">
+          <form>
+              <div class="form-group">
+                  <label ><b>Name*</b></label>
+                  <input type="text" class="form-control"  placeholder="Name">
+              </div>
+              <div class="form-group">
+                  <label><b>Mobile Number*</b></label>
+                  <input type="number" class="form-control" placeholder="Mobile Number">
+              </div>
+              <div class="form-group">
+                  <label><b>Email Address*</b></label>
+                  <input type="email" class="form-control" placeholder="Email Address">
+              </div>
 
-                    </div>
-                </div>
-                <div class="form-row">
-                    <div class="form-group col-md-6">
-                        <label for="inputEmail4">Packing</label>
-                        <input type="text" class="form-control">
-                    </div>
-                    <div class="form-group col-md-6">
-                        <label>Destination Port/ Location</label>
-                        <input type="text" class="form-control">
-                    </div>
-                </div>
+          <div class="row">
+              <div class="form-group col-md-12">
 
-                <div class="form-row">
-                    <div class="form-group col-md-6">
-                        <label for="inputEmail4">Quantity</label>
-                        <input type="text" class="form-control">
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="form-group col-md-12">
+                  <label><b>Message*</b></label>
+                  <textarea maxlength="5000" data-msg-required="Please enter your message." rows="6" class="form-control"
+                      name="message" id="message" required></textarea>
 
-                        <label>Message *</label>
-                        <textarea maxlength="5000" data-msg-required="Please enter your message." rows="6" class="form-control" name="message" id="message" required></textarea>
-
-                    </div>
-                </div>
-
-                <div class="form-row">
-                    <div class="form-group col-md-4">
-                        <label>Human Verification *</label>
-                        <!-- <input type="text" class="form-control"> -->
-                        <div class="captcha form-control">
-                            <div class="captcha-image">
-                                <img id="captcha-image" src="/php/simple-php-captcha/simple-php-captcha.php?_CAPTCHA&amp;t=0.28108100+1596029167" alt="CAPTCHA code"> </div>
-                            <div class="captcha-refresh">
-                                <a href="#" id="refreshCaptcha"><i class="fa fa-refresh"></i></a>
-                            </div>
-
-                        </div>
-                    </div>
-                    <!-- <div class="form-group col-md-6">
-            <label>Destination Port/ Location</label>
-            <input type="text" class="form-control">
-          </div> -->
-                    <div class="col-md-8">
-                        <label></label>
-                        <input type="text" value="" maxlength="6" data-msg-captcha="Wrong verification code." data-msg-required="Please enter the verification code." placeholder="Type the verification code." class="form-control input-lg captcha-input" name="captcha" id="captcha"
-                            required>
-                    </div>
-                </div>
-
-                <br>
-                <button type="submit" class="btn btn-primary">Sign in</button>
-            </form>
-
+              </div>
+          </div>
+              <br>
+              <button type="submit" class="btn btn-primary">Submit</button>
+          </form>
+         </div>
             <div class="col-md-6">
                 <hr>
                 <h4 class="heading-primary">

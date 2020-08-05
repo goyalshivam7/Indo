@@ -56,7 +56,7 @@
 
 @media (min-width: 320px) and (max-width: 767px) {
     .carousel-img {
-        height: 300px;
+        height: 250px;
     }
     .card-img-top {
         height: 250px;

@@ -13,6 +13,7 @@
 
     <link rel="stylesheet" href="css/glide.core.min.css" />
     <link rel="stylesheet" href="css/glide.theme.min.css" />
+    <link rel="stylesheet" href="css/productList.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous" />
     <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
@@ -23,202 +24,7 @@
     <link rel="stylesheet" href="css/socialmedia.css" />
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" />
     <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
-    <style>
-        @media (min-width: 1481px) {
-            .theme {
-                background-color: black;
-                color: cornsilk;
-            }
-            .imageStyle {
-                height: 600px;
-                width: 500px;
-                box-shadow: 2px 4px 10px 0 rgba(0, 0, 0, 0.5);
-                margin-left: 20%;
-            }
-            .card {
-                box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.2);
-            }
-            .content-card {
-                position: relative;
-                display: -ms-flexbox;
-                display: flex;
-                -ms-flex-direction: column;
-                flex-direction: column;
-                min-width: 0;
-                word-wrap: break-word;
-                margin-left: 10%;
-                margin-right: 10%;
-                margin-top: 15%;
-            }
-            .text-style {
-                word-wrap: break-word;
-                padding-right: 5%;
-                padding-bottom: 5%;
-                padding-top: 5%;
-                font-size: 20px;
-            }
-        }
-        
-        @media (min-width: 320px) and (max-width: 767px) {
-            .theme {
-                background-color: black;
-                color: white;
-            }
-            .imageStyle {
-                height: 400px;
-                width: 300px;
-                /* box-shadow: 2px 4px 10px 0 rgba(0, 0, 0, 0.5); */
-                margin-left: 5%;
-            }
-            .card-deck {
-                padding: 5%;
-                margin-right: 0;
-            }
-            .container-fluid h1 {
-                text-align: center;
-                padding-left: 5%;
-                padding-right: 5%;
-            }
-            .description {
-                margin-top: 7%;
-                font-size: 22px;
-            }
-        }
-        
-        @media (min-width: 768px) and (max-width: 1480px) {
-            .theme {
-                background-color: black;
-                color: white;
-            }
-            .imageStyle {
-                height: 400px;
-                width: 300px;
-                box-shadow: 2px 4px 10px 0 rgba(0, 0, 0, 0.5);
-                margin-left: 20%;
-            }
-            .card-deck {
-                padding: 5%;
-                margin-right: 0;
-            }
-            .container-fluid h1 {
-                text-align: center;
-            }
-            /* section {
-        margin-top: 5%;
-        padding: 3%;
-    } */
-        }
-        
-        #customers {
-            font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
-            border-collapse: collapse;
-            width: 100%;
-        }
-        
-        #customers td,
-        #customers th {
-            border: 1px solid black;
-            padding: 8px;
-        }
-        
-        #customers tr:nth-child(even) {
-            background-color: #f2f2f2;
-        }
-        
-        #customers tr:hover {
-            background-color: #ddd;
-        }
-        
-        #customers th {
-            padding-top: 12px;
-            padding-bottom: 12px;
-            text-align: left;
-            background-color: #4CAF50;
-            color: white;
-        }
-        
-        #cust {
-            font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
-            border-collapse: collapse;
-            width: 70%;
-            margin-left: auto;
-            margin-right: auto;
-        }
-        
-        #cust td,
-        #cust th {
-            border: 1px solid black;
-            padding: 8px;
-        }
-        
-        #cust tr:nth-child(even) {
-            background-color: #f2f2f2;
-        }
-        
-        #cust tr:hover {
-            background-color: #ddd;
-        }
-        
-        #cust th {
-            padding-top: 12px;
-            padding-bottom: 12px;
-            text-align: left;
-            background-color: #4CAF50;
-            color: white;
-        }
-        
-        .col-md-6 {
-            padding-top: 20px;
-        }
-        
-        .const {
-            position: relative;
-            text-align: center;
-            color: white;
-        }
-        
-        .bottom-left {
-            position: absolute;
-            bottom: 8px;
-            left: 16px;
-        }
-        
-        .col-md-12 {
-            width: 70%;
-            margin-left: auto;
-            margin-right: auto;
-        }
-        
-        .centered {
-            color: black;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-        }
-        
-        #table-example-1 {
-            border-collapse: collapse;
-            border-spacing: 0;
-            width: 100%;
-            border: 1px solid black;
-        }
-        
-        th {
-            background-color: rgb(17, 185, 17);
-        }
-        
-        th,
-        td {
-            text-align: left;
-            padding: 8px;
-            border: 1px solid black;
-        }
-        
-        tr:nth-child(even) {
-            background-color: #f2f2f2
-        }
-    </style>
+
 </head>
 
 <body>
@@ -228,13 +34,13 @@
                 <img src="images/logo.png" width="150" height="40" alt="" loading="lazy" />
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon text-white"></span>
-        </button>
+                <span class="navbar-toggler-icon text-white"></span>
+            </button>
             <div class="collapse navbar-collapse mx-5" id="navbarText">
                 <ul class="navbar-nav ml-auto text-white" style="
-              font-family: 'Barlow Semi Condensed', sans-serif;
-              font-size: 18px;
-            ">
+                  font-family: 'Barlow Semi Condensed', sans-serif;
+                  font-size: 18px;
+                ">
                     <li class="nav-item ">
                         <a class="nav-link" href="indolacca.html">Home </a>
                     </li>
@@ -252,7 +58,7 @@
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link" href="blog-index.html">Blogs</a>
+                        <a class="nav-link" href="blog-index.html">Blog</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="contact.html">Contact</a>
@@ -262,37 +68,40 @@
         </nav>
 
     </section>
-    <div class="const">
+    <div class="const card">
         <img src="images/ahd.jpg" style="width:100%;" height="400px">
         <div class="centered">
-            COMMODITY: SEEDLAC<br> Category: Organic Chemicals – Natural Resins<br> CAS : 9000-59-3<br> EINECS: 232-549-9<br> HSN Code: 1301.90.99 (INDIA)
+            COMMODITY: SEEDLAC<br> Category: Organic Chemicals – Natural Resins<br> CAS : 9000-59-3<br> EINECS: 232-549-9
+            <br> HSN Code: 1301.90.99 (INDIA)
 
 
 
         </div>
-        <div class="bottom-left">
-            <h1 style="color: black">SEEDLAC</h1>
-            <span property="itemListElement" typeof="ListItem"><a property="item" typeof="WebPage" title="Go to GlobEXIM."
-          href="indolaca.html" class="home"><span property="name">HOME</span></a>
-            <meta property="position" content="1">
-            </span> &gt; <span property="itemListElement" typeof="ListItem"><a
-          property="item" typeof="WebPage" title="Go to Commodities." href="product.html"
-          class="post post-commodities-archive"><span property="name">PRODUCTS</span></a>
-            <meta property="position" content="2">
-            </span> &gt; <span property="itemListElement" typeof="ListItem"><a
-          property="item" typeof="WebPage" title="Go to the Fertilizer Commodities category archives."
-          class="taxonomy commodities_category"><span property="name">SEEDLAC</span></a>
-            <meta property="position" content="3">
-            </span>
+        <div class="card">
+            <div class="bottom-left">
+                <h1 style="color: black">SEEDLAC</h1>
+                <span property="itemListElement" typeof="ListItem"><a property="item" typeof="WebPage"
+                    title="Go to GlobEXIM." href="indolaca.html" class="home"><span property="name">HOME</span></a>
+                <meta property="position" content="1">
+                </span> &gt; <span property="itemListElement" typeof="ListItem"><a property="item" typeof="WebPage"
+                    title="Go to Commodities." href="product.html" class="post post-commodities-archive"><span
+                        property="name">PRODUCTS</span></a>
+                <meta property="position" content="2">
+                </span> &gt; <span property="itemListElement" typeof="ListItem"><a property="item" typeof="WebPage"
+                    title="Go to the Fertilizer Commodities category archives."
+                    class="taxonomy commodities_category"><span property="name">SEEDLAC</span></a>
+                <meta property="position" content="3">
+                </span>
+            </div>
         </div>
     </div>
     </div>
 
-    <br>
     <section>
-        <div class="container-fluid img-fluid py-5 mt-5">
+        <div class=" card container-fluid img-fluid py-5">
             <div class="row">
-                <div class="col-md-6" data-aos="fade-right">
+                <div class="col-md-1"></div>
+                <div class="col-md-4" data-aos="fade-right">
                     <img class="imageStyle" src="images/ahd.jpg">
                 </div>
                 <div class="col-md-6">
@@ -308,17 +117,24 @@
                     <h4>TECHNICALS</h4>
                     <p>
                         • It is associated with an odoriferous compound, a wax and a mixture of dyes such as Erythrolaccin and Desoxyerythrolaccin which are Hydroxyanthraquinone derivatives.<br> • It is insoluble in water, glycerol, hydrocarbon solvents
-                        and esters but dissolves readily in alcohol, aqueous solution of alkalies, organic acids and ketones.</p>
-                    <a href="pdf/tsp.pdf">
-                        <button type="button" class="btn btn-primary">Download pdf</button>
+                        and esters but dissolves readily in alcohol, aqueous solution of alkalies, organic acids and ketones.
+                    </p>
+                    <!-- <p><span style="margin-left: 20px;font-size: 30px; text-decoration:underline;">Specifications:</span> AS PER
+                ANNEXURE A</p> -->
+                    <h4>Packaging:</h4>
+                    <p> Standard Jute Gunny Bag - 50kgs Net Weight, 75kgs Net Weight </p>
+                    <h4>Specifications:</h4>
+                    <a href="pdf/GoldenKusmi.pdf" target="_blank">
+                        <button type="button" class="btn btn-primary">Click Here</button>
                     </a>
                 </div>
+                <div class="col-md-1"></div>
             </div>
         </div>
     </section>
 
-    <section style="background-color:#dff1d7;">
-        <div class="container-fluid img-fluid py-5 mt-5">
+    <section style="background-color:#dff1d7;" class="py-5">
+        <div class="container card img-fluid py-5">
             <div class="row">
                 <h3 style="padding-left:30px; text-decoration:underline; color:black;">Application</h3>
                 <p style="padding-left:30px">
@@ -412,112 +228,106 @@
             </div>
         </div>
     </section>
-    <section style="background-color:#dff1d7;">
-        <div class="row">
-            <div class="col-md-6" data-aos="fade-right">
-                <center>
-                    <h1 style="color: black;">As an Adhesive and Cement
+    <section style="background-color:#dff1d7;" class="pb-5">
+        <div class="container card py-5">
+            <div class="row">
+                <div class="col-md-6" data-aos="fade-right">
+                    <center>
+                        <h1 style="color: black;">As an Adhesive and Cement
 
+
+                        </h1>
+                    </center>
+                    <table id="customers">
+
+                        <tr>
+                            <td>Plate sealer
+
+                            </td>
+                            <td>Abrasive paper and cloth</td>
+
+                        </tr>
+                        <tr>
+                            <td>Gasket cement
+
+                            </td>
+                            <td>Capping cement for electrical lamps and radio valves</td>
+
+                        </tr>
+                        <tr>
+                            <td>General cement
+
+                            </td>
+                            <td> Optical Cement</td>
+
+                        </tr>
+
+
+                    </table>
+
+                </div>
+                <div class="col-md-6" data-aos="fade-right">
+                    <h1 style="color: black;">In Miscellaneous Applications
 
                     </h1>
-                </center>
-                <table id="customers">
+                    <table id="customers">
 
-                    <tr>
-                        <td>Plate sealer
+                        <tr>
+                            <td>Lithographic, Waterproof and Coloured ink
 
-                        </td>
-                        <td>Abrasive paper and cloth</td>
+                            </td>
+                            <td>Dental Compositions</td>
 
-                    </tr>
-                    <tr>
-                        <td>Gasket cement
+                        </tr>
+                        <tr>
+                            <td>Photographic and engraving industry
 
-                        </td>
-                        <td>Capping cement for electrical lamps and radio valves</td>
+                            </td>
+                            <td>Fireworks</td>
 
-                    </tr>
-                    <tr>
-                        <td>General cement
+                        </tr>
+                        <tr>
+                            <td>Rubber goods Shoe Industry
 
-                        </td>
-                        <td> Optical Cement</td>
+                            </td>
+                            <td>Shoe Industry</td>
 
-                    </tr>
+                        </tr>
+                        <tr>
+                            <td>Hat proofing
+                            </td>
+                            <td>Playing card finish</td>
+
+                        </tr>
+                        <tr>
+                            <td>Cosmetics – nail polishes
+
+                            </td>
+                            <td>Oil varnish</td>
+
+                        </tr>
+                        <tr>
+                            <td>Lacquerware and Toys
+                            </td>
+                            <td>Anti-fouling paints</td>
+
+                        </tr>
+                        <tr>
+                            <td>Etch primer
 
 
-                </table>
+                            </td>
+                            <td> Bangle Making</td>
 
+                        </tr>
+
+                    </table>
+
+                </div>
             </div>
-            <div class="col-md-6" data-aos="fade-right">
-                <h1 style="color: black;">In Miscellaneous Applications
-
-                </h1>
-                <table id="customers">
-
-                    <tr>
-                        <td>Lithographic, Waterproof and Coloured ink
-
-                        </td>
-                        <td>Dental Compositions</td>
-
-                    </tr>
-                    <tr>
-                        <td>Photographic and engraving industry
-
-                        </td>
-                        <td>Fireworks</td>
-
-                    </tr>
-                    <tr>
-                        <td>Rubber goods Shoe Industry
-
-                        </td>
-                        <td>Shoe Industry</td>
-
-                    </tr>
-                    <tr>
-                        <td>Hat proofing
-                        </td>
-                        <td>Playing card finish</td>
-
-                    </tr>
-                    <tr>
-                        <td>Cosmetics – nail polishes
-
-                        </td>
-                        <td>Oil varnish</td>
-
-                    </tr>
-                    <tr>
-                        <td>Lacquerware and Toys
-                        </td>
-                        <td>Anti-fouling paints</td>
-
-                    </tr>
-                    <tr>
-                        <td>Etch primer
-
-
-                        </td>
-                        <td> Bangle Making</td>
-
-                    </tr>
-
-                </table>
-
-            </div>
-        </div>
-        <br><br>
-
-        <div class="col-lg-12 col-md-9 col-xs-9 wow fadeInLeft" data-wow-duration="1s" data-wow-delay="0.1s">
-            <p><span style="margin-left: 20px;font-size: 30px; text-decoration:underline;">Specifications:</span> AS PER ANNEXURE A</p>
-            <p><span style="margin-left: 20px;font-size: 30px; text-decoration:underline;">Packaging:</span> Standard Jute Gunny Bag - 50kgs Net Weight, 75kgs Net Weight </p>
 
         </div>
     </section>
-    <br>
-    <br />
 
     <section>
         <div class="footer">
@@ -537,19 +347,19 @@
                     <h4 style="color: rgb(178, 230, 36);">Quick Links</h4>
                     <div class="border"></div>
                     <ul>
-                        <a href="">
+                        <a href="indolacca.html">
                             <li>Home</li>
                         </a>
-                        <a href="">
-                            <li>About Us</li>
+                        <a href="aboutus.html">
+                            <li>Who We Are</li>
                         </a>
-                        <a href="">
+                        <a href="product.html">
                             <li>Products</li>
                         </a>
-                        <a href="">
+                        <a href="blog-index.html">
                             <li>Blog</li>
                         </a>
-                        <a href="">
+                        <a href="contact.html">
                             <li>Contact Us</li>
                         </a>
                     </ul>
@@ -560,19 +370,19 @@
                     <h4 style="color: rgb(178, 230, 36);">Products</h4>
                     <div class="border"></div>
                     <ul>
-                        <a href="">
+                        <a href="product.html">
                             <li>SHEED LAC</li>
                         </a>
-                        <a href="">
+                        <a href="product.html">
                             <li>BUTTON LAC</li>
                         </a>
-                        <a href="">
+                        <a href="product.html">
                             <li>SHELLAC</li>
                         </a>
-                        <a href="">
+                        <a href="product.html">
                             <li>BLEACH SHELLAC</li>
                         </a>
-                        <a href="">
+                        <a href="product.html">
                             <li>ALEURITIC ACID</li>
                         </a>
                     </ul>
@@ -583,20 +393,18 @@
                     <h4 style="color: rgb(178, 230, 36);">Contact Us</h4>
                     <div class="border"></div>
                     <ul>
-                        <li><i class="fa fa-map-marker" aria-hidden="true"></i>1, XYZ Street, New Delhi</li>
-                        <li><i class="fa fa-phone" aria-hidden="true"></i>+91-9176561782</li>
-                        <li><i class="fa fa-envelope" aria-hidden="true"></i>info@indolacca.com</li>
+                        <li><i class="fa fa-map-marker" aria-hidden="true"></i>21/B, 15th Floor, Bengal Eco Intelligent Park,<br> EM-3 Block, Sector V, Salt Lake City,<br> Kolkata 700091, INDIA<br></li><br><br><br>
+                        <li><i class="fa fa-phone" aria-hidden="true"></i>9176561782 / 9560800427</li>
+                        <li><i class="fa fa-envelope" aria-hidden="true"></i>info@globeximtrading.com</li>
                     </ul>
                     <div class="social-media">
                         <a href=""><i class="fa fa-facebook" aria-hidden="true"></i></a>
                         <a href=""><i class="fa fa-twitter" aria-hidden="true"></i></a>
-                        <a href=""><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                        <a href=""><i class="fa fa-linkedin" aria-hidden="true"></i></a>
                         <a href=""><i class="fa fa-google-plus" aria-hidden="true"></i></a>
                     </div>
                 </div>
-
             </div>
-
         </div>
         <div class="footer-bottom">
             Copyright &copy; 2020 - <a href="#"> Indo Lacca</a>. All rights reserved. | <a href="#">Email Login</a>(For Official use)
@@ -604,12 +412,6 @@
         </div>
     </section>
 
-    <!-- <footer>
-        <p>Copyright &copy;
-            <script>
-                document.write(new Date().getFullYear());
-            </script>, HelloWorld</p>
-    </footer> -->
 
     <!-- JS, Popper.js, and jQuery -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
